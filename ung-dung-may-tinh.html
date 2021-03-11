@@ -7,32 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ung-dung-may-tinh</title>
 </head>
-<h1>Canculator</h1>
+<h1>Calculator</h1>
 
 <body>
     <form>
         <input id="number1" type="number">;
         <input id="number2" type="number"> <br>
         <br>
-        <button type="button" onclick="canculate()">Addition(+)</button>
-        <button type="button" onclick="canculate()">Subtraction(-)</button>
-        <button type="button" onclick="canculate()">Multiplication(x)</button>
-        <button type="button" onclick="canculate()">Division(/)</button>
+        <button type="button" onclick="addition()">Addition(+)</button>
+        <button type="button" onclick="subtraction()">Subtraction(-)</button>
+        <button type="button" onclick="multiplication()">Multiplication(x)</button>
+        <button type="button" onclick="division()">Division(/)</button>
+        <p id="addition"></p>
+        <p id="subtraction"></p>
+        <p id="multiplication"></p>
+        <p id="division"></p>
     </form>
     <script>
-        function canculate() {
-            document.getElementById("number1").value;
-            document.getElementById("number2").value;
-            let Addition = number1 + number2;
-            let Subtraction = number1 - number2;
-            let Multiplication = number1 * number2;
-            let Divison = number1 / number2;
-            document.getElementById("Addition").innerText = ("Result Addition:" + Addition);
-            document.getElementById("Subtraction").innerText = ("Result Subtraction:" + Subtraction);
-            document.getElementById("Multiplication").innerText = ("Result Multiplication:" + Multiplication);
-            document.getElementById("Divison").innerText = ("Result Divison:" + Divison);
+        function addition() {
+            let number1 = Number(document.getElementById("number1").value);
+            let number2 = Number(document.getElementById("number2").value)
+            let addition = number1 + number2;
+            document.getElementById("addition").innerText ="Result Addition:" + addition;
+        }
+        function subtraction() {
+            let number1 = Number(document.getElementById("number1").value);
+            let number2 = Number(document.getElementById("number2").value);
+            let subtraction = number1 - number2;
+            document.getElementById("subtraction").innerText ="Result Subtraction:" + subtraction;
+        }
+        function multiplication() {
+            let number1 = Number(document.getElementById("number1").value);
+            let number2 = Number(document.getElementById("number2").value);
+            let multiplication = number1 * number2;
+            document.getElementById("multiplication").innerText ="Result Multiplication:" + multiplication;
+        }
+        function division() {
+            let number1 = Number(document.getElementById("number1").value);
+            let number2 = Number(document.getElementById("number2").value);
+            let division = number1 / number2;
+            document.getElementById("division").innerText ="Result Division:" + division;
         }
     </script>
+   
 </body>
 
 </html>
