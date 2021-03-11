@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ung-dung-may-tinh</title>
+</head>
+<h1>Canculator</h1>
+
+<body>
+    <form>
+        <input id="number1" type="number">;
+        <input id="number2" type="number"> <br>
+        <br>
+        <button type="button" onclick="canculate()">Addition(+)</button>
+        <button type="button" onclick="canculate()">Subtraction(-)</button>
+        <button type="button" onclick="canculate()">Multiplication(x)</button>
+        <button type="button" onclick="canculate()">Division(/)</button>
+    </form>
+    <script>
+        function canculate() {
+            let Addition = number1 + number2
+            let Subtraction = number1 - number2
+            let Multiplication = number1 * number2
+            let Divison = number1 / number2
+            document.getElementById("Addition").innerText = ("Result Addition:" + Addition);
+            document.getElementById("Subtraction").innerText = ("Result Subtraction:" + Subtraction);
+            document.getElementById("Multiplication").innerText = ("Result Multiplication:" + Multiplication);
+            document.getElementById("Divison").innerText = ("Result Divison:" + Divison);
+        }
+    </script>
+</body>
+
+</html>
